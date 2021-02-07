@@ -24,11 +24,11 @@ const Chat = ({ location }) => {
     setRoom(room);
 
     socket.emit('join', { name, room }, (data) => {
-      console.log(`User id = ${socket.id}`);
-      console.log('All users:', data);
+      if(typeof data === 'string') {
+        alert('Username is taken. Please choose another one');
+        window.location = '/';
+      }
     });
-
-    console.log('First useEffect');
 
     return () => {
       socket.emit('disconnect');

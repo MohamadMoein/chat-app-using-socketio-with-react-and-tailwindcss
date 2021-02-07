@@ -8,8 +8,8 @@ const Message = ({ message: { user, text }, name }) => {
   
   const messageRowClasses = isSentByCurrentUser? 'flex flex-row-reverse text-sm': 'flex flex-row text-sm';
   const messageBoxClasses = isSentByCurrentUser
-  ? 'shadow-sm flex-initial my-1.5 mr-3 py-3 px-4 bg-white rounded-tr-lg rounded-tl-lg rounded-bl-lg bg-blue-500 text-white'
-  : 'shadow-sm flex-initial my-1.5 ml-3 py-3 px-4 bg-white rounded-tr-lg rounded-tl-lg rounded-br-lg';
+  ? 'shadow-sm flex-initial my-2 mr-3 py-3 px-4 bg-white rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl bg-blue-500 text-white'
+  : 'shadow-sm flex-initial my-2 ml-3 py-3 px-4 bg-white rounded-tr-2xl rounded-tl-2xl rounded-br-2xl';
 
   return (
     <div className={messageRowClasses}>
