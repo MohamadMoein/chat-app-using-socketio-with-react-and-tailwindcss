@@ -3,5 +3,43 @@
 @tailwind utilities;
 
 input {
-  @apply w-full my-2 py-3 px-5 rounded-sm text-sm;
+  @apply w-full my-2 py-3 px-5 rounded-sm text-sm border-2 border-gray-100 border-solid;
+}
+
+.chat-room-title {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.chat-room-title::before {
+  content: attr(data-before-content);
+  @apply bg-blue-200 inline-block w-2 h-2 rounded-full mx-3;
+}
+
+.close-btn {
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #e0e0e0;
+}
+
+.close-btn::before {
+  transform: rotate(45deg);
+}
+
+.close-btn::after {
+  transform: rotate(-45deg);
 }
